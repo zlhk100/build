@@ -472,14 +472,16 @@ define run-help
 	@echo
 endef
 
+
+
 ifneq (, $(LAUNCH_TERMINAL))
 define launch-terminal
 	@nc -z  127.0.0.1 $(1) || \
 		$(LAUNCH_TERMINAL) "$(BUILD_PATH)/soc_term.py $(1)" &
 endef
 else
-gnome-terminal := $(shell command -v gnome-terminal 2>/dev/null)
-konsole := $(shell command -v konsole 2>/dev/null)
+# gnome-terminal := $(shell command -v gnome-terminal 2>/dev/null)
+# konsole := $(shell command -v konsole 2>/dev/null)
 xterm := $(shell command -v xterm 2>/dev/null)
 ifdef gnome-terminal
 define launch-terminal
