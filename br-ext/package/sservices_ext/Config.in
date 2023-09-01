@@ -1,0 +1,26 @@
+config BR2_PACKAGE_SSERVICES_EXT
+	bool "sservices"
+	help
+	  SSERVICES code repo
+
+config BR2_PACKAGE_SSERVICES_EXT_SITE
+	string "Secure Services library path"
+	default ""
+	help
+	  The path to the source directory of Secure Services library
+
+if BR2_PACKAGE_SSERVICES_EXT
+
+config BR2_PACKAGE_SSERVICES_EXT_SDK
+	string "SSERVICES SDK path"
+	default ""
+	help
+	  some help
+
+config BR2_PACKAGE_SSERVICES_EXT_CROSS_COMPILE
+	string "SSERVICES TA cross compiler"
+	default ""
+	help
+	  some help
+
+endif
